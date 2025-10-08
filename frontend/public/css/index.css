@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --text-light: #fff;
+    --dark-color: #212529;
+    --header-color: #004d8e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* --- ESTILO DO HEADER --- */
+.header {
+  background-color: var(--header-color);
+  color: var(--text-light);
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 1rem;
+}
+
+/* --- LOGO --- */
+.header-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+/* --- BOTÃO MENU MOBILE --- */
+.header-btn-mobile {
+  font-size: 2rem;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid var(--text-light);
+  border-radius: 4px;
+}
+
+/* --- BARRA DE BUSCA --- */
+.container-search {
+  position: relative;
+  width: 100%;
+  order: 3; 
+  flex-basis: 100%; /* Garante que ocupe a linha inteira */
+}
+
+.container-search input {
+  width: 100%;
+  padding: 10px 15px 10px 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: var(--info-color);
+}
+
+.container-search #btn-search {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.13rem;
+  color: var(--text-gray);
+}
+
+.header-user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-user-actions .login-link {
+  display: none; 
+}
+
+.header-user-actions .header-icons {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+.header-icons .bi-bell{
+  display: none; 
+}
+
+/* --- MENU LATERAL (SIDEBAR) MOBILE --- */
+.nav-sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%; 
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background-color: var(--header-color);
+  color: var(--text-light);
+  z-index: 1001;
+  transition: left 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+.nav-sidebar.active {
+  left: 0; /* Mostra o menu */
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: end;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.sidebar-close-btn {
+  font-size: 1.5rem;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 1rem;
+}
+.sidebar-links li a {
+  display: block;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+}
+.sidebar-links li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.sidebar-links i {
+  margin-right: 1rem;
+  width: 20px; 
+}
+
+
+/* --- MEDIA QUERY PARA TELAS MAIORES (Desktop) --- */
+@media (min-width: 1024px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+  .header-content {
+    flex-wrap: nowrap; 
+    gap: 2rem;
+  }
+
+  .header-btn-mobile {
+    display: none;
+  }
+
+
+  .header-logo {
+    margin: 0; 
+    order: 1; 
+  }
+
+  .container-search {
+    order: 2; 
+    flex-grow: 1; 
+    flex-basis: auto;
+    max-width: 600px; 
+  }
+
+
+  .header-user-actions {
+    order: 3; 
+    gap: 1.5rem;
+  }
+  .login-link {
+    display: flex !important; 
+    align-items: center;
+    gap: 0.8rem;
+    white-space: nowrap; 
+  }
+  .login-link i {
+    font-size: 2rem;
+  }
+  .login-link span {
+    line-height: 1.2;
+    font-size: 0.9rem;
+  }
+
+  /* Mostra todos os ícones no desktop */
+  .header-icons .bi-bell 
+ {
+    display: inline;
+  }
+}
+
+
+
