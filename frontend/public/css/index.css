@@ -19,6 +19,7 @@ body {
     --text-light: #fff;
     --dark-color: #212529;
     --header-color: #004d8e;
+    --orange-accent: #ff6a00; 
 }
 
 a {
@@ -173,6 +174,160 @@ button {
 }
 
 
+/* ---  ESTILO DO CONTEÚDO PRINCIPAL (MAIN) --- */
+.main-content {
+  padding: 2rem 1rem; 
+}
+
+.products-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.products-grid {
+  display: grid;
+  /* Cria colunas responsivas: se couber, 250px de largura, se não, ocupa o espaço (1fr) */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem; 
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background-color: var(--text-light);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden; /* Garante que a imagem não saia dos cantos arredondados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Força a imagem a ser quadrada */
+  object-fit: cover; 
+}
+
+.product-card-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Faz esta área crescer para ocupar o espaço do card */
+}
+
+.product-name {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  flex-grow: 1; /* Empurra o preço e o botão para baixo */
+}
+
+.product-price {
+  margin-bottom: 1rem;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  text-decoration: line-through;
+  margin-right: 0.5rem;
+}
+
+.new-price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--orange-accent);
+}
+
+.buy-button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: var(--orange-accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.buy-button:hover {
+  background-color: #e65c00;
+}
+
+
+/* ---   ESTILO DO FOOTER   --- */
+.footer {
+  background-color: #212529;
+  color: #ccc; 
+  padding: 3rem 1.5rem 1rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+}
+
+.footer-column {
+  flex: 1; /* Tenta dar o mesmo espaço para cada coluna */
+  min-width: 200px; /* Largura mínima antes de quebrar a linha */
+}
+
+.footer-column h4 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px solid #444;
+  font-size: 0.9rem;
+  color: #888;
+}
+
 /* --- MEDIA QUERY PARA TELAS MAIORES (Desktop) --- */
 @media (min-width: 1024px) {
   .header {
@@ -225,6 +380,5 @@ button {
     display: inline;
   }
 }
-
 
 
