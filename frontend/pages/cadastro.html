@@ -18,17 +18,17 @@
 
                 <div class="inputs-group">
                     <div class="input-fields">
-                        <input type="text" placeholder="Nome de usuário" autocomplete="off">
+                        <input type="text" id="nome" placeholder="Nome de usuário" autocomplete="off" required>
                     </div>
                     <div class="input-fields">
-                        <input type="email" name="" id="" placeholder="E-mail" autocomplete="off">
+                        <input type="email" name="" id="email" placeholder="E-mail" autocomplete="off" required>
                     </div>
                      <div class="input-fields">
-                        <input type="password" name="" id="" placeholder="Senha" autocomplete="off">
+                        <input type="password" name="" id="password" placeholder="Senha" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="box-btn">
-                    <button type="submit">Cadastrar</button>
+                    <button type="button" id="btn">Cadastrar</button>
                 </div>
                 <div class="box-links">
                     <a  id="link-forgot" href="/frontend/pages/login.html">
@@ -48,6 +48,8 @@
 
 
     </div>
+
+    <script src="/frontend/public/js/cadastro.js"></script>  
 </body>
 
 </html>

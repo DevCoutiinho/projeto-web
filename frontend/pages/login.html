@@ -18,14 +18,14 @@
 
                 <div class="inputs-group">
                     <div class="input-fields">
-                        <input type="text" placeholder="Nome de usuário ou e-mail" autocomplete="off">
+                        <input type="text" id="email" placeholder="Nome de usuário ou e-mail" autocomplete="off" required>
                     </div>
                     <div class="input-fields">
-                        <input type="password" name="" id="" placeholder="Senha" autocomplete="off">
+                        <input type="password" name="" id="password" placeholder="Senha" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="box-btn">
-                    <button type="submit">Login</button>
+                    <button type="button" id="btn-login">Login</button>
                 </div>
                 <div class="box-links">
                     <a href="#">Esqueceu a senha ?</a>
@@ -46,6 +46,8 @@
 
 
     </div>
+
+    <script src="/frontend/public/js/login.js"></script>
 </body>
 
 </html>
