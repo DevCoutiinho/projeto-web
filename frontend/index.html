@@ -20,7 +20,9 @@
       </div>
       <ul class="sidebar-links">
         <li>
-          <a href="/frontend/pages/login.html"><i class="bi bi-person"></i> Olá. Acesse sua conta</a>
+          <a href="/frontend/pages/login.html"
+            ><i class="bi bi-person"></i> Olá. Acesse sua conta</a
+          >
         </li>
         <li>
           <a href="#"><i class="bi bi-list-ul"></i> Departamentos</a>
@@ -37,7 +39,7 @@
         </button>
 
         <a href="#" class="header-logo">
-          <strong>Logo!</strong>
+          <img src="/frontend/public/assets/imgs/logo-3.png" alt="">
         </a>
 
         <div class="container-search">
@@ -47,10 +49,10 @@
           <input type="text" placeholder="O que você procura?" />
         </div>
 
-        <div class="header-user-actions">
-          <a href="/frontend/pages/login.html" class="login-link">
+        <div class="header-user-actions" id="header-user">
+          <a href="/frontend/pages/login.html" id="login-link" class="login-link">
             <i class="bi bi-person"></i>
-            <span>Entre ou<br /><b>Cadastre-se</b></span>
+            <span id="user-greeting">Entre ou<br /><b>Cadastre-se</b></span>
           </a>
           <div class="header-icons">
             <a href="#" class="icon-link"><i class="bi bi-bell"></i></a>
@@ -59,58 +61,10 @@
         </div>
       </div>
     </header>
-     <main class="main-content">
+    <main class="main-content">
       <section class="products-section">
         <h2>Produtos em Destaque</h2>
-        <div class="products-grid" id="products-list">
-          
-          <a href="#" class="product-card">
-            <img src="https://tse1.mm.bing.net/th/id/OIP.7qla_kBEMQe8AhgxAKlE9AHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Produto 1" class="product-image">
-            <div class="product-card-info">
-              <h3 class="product-name">PC Gamer Avançado com RGB</h3>
-              <div class="product-price">
-                <span class="old-price">R$ 5.999,90</span>
-                <span class="new-price">R$ 4.799,90</span>
-              </div>
-              <button class="buy-button">Comprar</button>
-            </div>
-          </a>
-
-          <a href="#" class="product-card">
-            <img src="https://www.worten.es/i/0386050f0378e36a00cb25105d022d7f7b569dec.jpg" alt="Produto 2" class="product-image">
-            <div class="product-card-info">
-              <h3 class="product-name">Monitor Curvo UltraWide 34"</h3>
-              <div class="product-price">
-                <span class="old-price">R$ 3.200,50</span>
-                <span class="new-price">R$ 2.899,00</span>
-              </div>
-              <button class="buy-button">Comprar</button>
-            </div>
-          </a>
-
-          <a href="#" class="product-card">
-            <img src="https://tse4.mm.bing.net/th/id/OIP.54usdW4Xklin7VNUiHb14AHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Produto 3" class="product-image">
-            <div class="product-card-info">
-              <h3 class="product-name">Cadeira Gamer Ergonômica Pro</h3>
-              <div class="product-price">
-                <span class="new-price">R$ 1.250,00</span>
-              </div>
-              <button class="buy-button">Comprar</button>
-            </div>
-          </a>
-
-          <a href="#" class="product-card">
-            <img src="https://tse3.mm.bing.net/th/id/OIP.wdk2vmoj0Q8IOUBTO8iB0wHaHl?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Produto 4" class="product-image">
-            <div class="product-card-info">
-              <h3 class="product-name">Headset Sem Fio 7.1 Surround</h3>
-              <div class="product-price">
-                <span class="new-price">R$ 699,90</span>
-              </div>
-              <button class="buy-button">Comprar</button>
-            </div>
-          </a>
-
-          </div>
+        <div class="products-grid" id="products-list"></div>
       </section>
     </main>
     <footer class="footer">

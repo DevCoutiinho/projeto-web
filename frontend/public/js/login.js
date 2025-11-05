@@ -24,7 +24,8 @@ document.getElementById("btn-login").addEventListener("click", () => {
     return;
   }
 
-  window.location.href = "/frontend/pages/home.html";
+  window.localStorage.setItem("name", email);
+  window.location.href = "/frontend/index.html";
 
   
 });

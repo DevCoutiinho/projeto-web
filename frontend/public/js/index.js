@@ -16,7 +16,7 @@ function listaProdutos(data) {
 
     const productName = document.createElement("h3");
     productName.className = "product-name";
-    productName.textContent = produto.name;
+    productName.textContent = produto.title;
 
     const productPrice = document.createElement("div");
     productPrice.className = "product-price";
@@ -49,6 +49,18 @@ async function getTabelaProdutos() {
   listaProdutos(data);
 }
 getTabelaProdutos();
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  const userNameDisplay = document.getElementById("user-greeting"); 
+  const loginLink = document.getElementById("login-link"); 
+  const nameUser = window.localStorage.getItem("name");
+
+  if (nameUser && userNameDisplay) {
+    userNameDisplay.innerHTML = `Olá,<br /><b>${nameUser}</b>`;
+    loginLink.href = "#"; 
+  }
+});
 
 
 document.addEventListener("DOMContentLoaded", () => {
