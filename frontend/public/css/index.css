@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #f3f3f3;
+  background-color: #fafafb;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -192,19 +192,13 @@ button {
 }
 
 .products-section h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #333;
-}
-
-.products-grid {
-  display: grid;
-  /* Cria colunas responsivas: se couber, 250px de largura, se não, ocupa o espaço (1fr) */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  max-width: 2200px;
-  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #42464d;
+  padding-left: 40px;
+  text-transform: uppercase;
+  margin: 3rem 0 1.5rem 0;
 }
 
 .product-card {
@@ -276,6 +270,60 @@ button {
 
 .buy-button:hover {
   background-color: #e65c00;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 2.5rem 0 1.5rem 1rem;
+}
+
+.category-swiper-container {
+  position: relative;
+  width: 100%;
+
+  /* Cria espaço nas laterais para os botões de navegação */
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.category-swiper-container .swiper-slide {
+  height: auto; /* Deixa o card definir a altura */
+  display: flex; /* Ajuda a alinhar o card 100% */
+}
+
+/* Estilo dos botões de navegação (setas) */
+.category-swiper-container .swiper-button-next,
+.category-swiper-container .swiper-button-prev {
+  top: 40%;
+  --swiper-navigation-size: 16px;
+  --swiper-navigation-color: var(--text-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--text-light);
+  border-radius: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.category-swiper-container .swiper-button-prev {
+  left: 5px;
+}
+.category-swiper-container .swiper-button-next {
+  right: 5px;
+}
+
+/* Paginação (bolinhas) */
+.category-swiper-container .swiper-pagination {
+  position: relative; /* Tira do 'absolute' */
+  bottom: auto;
+  margin-top: 1.5rem; /* Espaço abaixo do carrossel */
+}
+
+/* Cor da bolinha ativa (usando sua cor laranja) */
+.category-swiper-container .swiper-pagination-bullet-active {
+  background: var(--orange-accent);
 }
 
 /* ---   ESTILO DO FOOTER   --- */

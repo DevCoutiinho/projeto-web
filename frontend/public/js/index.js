@@ -1,86 +1,330 @@
+// --- FUNÇÕES DE SETUP ---
+
+/**
+ * Cria o HTML para todos os produtos, separando cada
+ * categoria em seu próprio carrossel Swiper.
+ */
 function listaProdutos(data) {
   const produtosContainer = document.getElementById("products-list");
+  if (!produtosContainer) {
+    console.error("Container principal 'products-list' não encontrado.");
+    return;
+  }
+  produtosContainer.innerHTML = ""; // Limpa o container
 
-  data.forEach((produto) => {
-    const productCard = document.createElement("a");
-    productCard.href = "#";
-    productCard.className = "product-card";
+  // Itera sobre cada categoria (ex: 'highlights', 'perifericos')
+  Object.entries(data).forEach(([chave, produtos]) => {
+    // 1. Cria o título da categoria (H2)
+    const categoriesSection = document.createElement("h2");
+    categoriesSection.className = "category-title";
+    categoriesSection.textContent =
+      chave.charAt(0).toUpperCase() + chave.slice(1);
+    produtosContainer.appendChild(categoriesSection);
 
-    const productImage = document.createElement("img");
-    productImage.src = produto.img;
-    productImage.alt = produto.name;
-    productImage.className = "product-image";
+    // 2. Cria a ESTRUTURA de um novo Swiper para esta categoria
+    const swiperContainer = document.createElement("div");
+    // Adicionamos uma classe comum para podermos inicializar todos depois
+    swiperContainer.className = "swiper category-swiper-container";
 
-    const productInfo = document.createElement("div");
-    productInfo.className = "product-card-info";
+    const swiperWrapper = document.createElement("div");
+    swiperWrapper.className = "swiper-wrapper";
 
-    const productName = document.createElement("h3");
-    productName.className = "product-name";
-    productName.textContent = produto.title;
+    // 3. Itera sobre os PRODUTOS e cria os SLIDES
+    produtos.forEach((produto) => {
+      // CADA PRODUTO AGORA É UM SLIDE
+      const swiperSlide = document.createElement("div");
+      swiperSlide.className = "swiper-slide";
 
-    const productPrice = document.createElement("div");
-    productPrice.className = "product-price";
+      // Cria o card de produto (como antes)
+      const productCard = document.createElement("a");
+      productCard.href = "#";
+      productCard.className = "product-card";
 
-    const oldPrice = document.createElement("span");
-    oldPrice.className = "old-price";
-    oldPrice.textContent = produto.old_price;
+      const productImage = document.createElement("img");
+      productImage.src = produto.img;
+      productImage.alt = produto.title; // Corrigido
+      productImage.className = "product-image";
 
-    const newPrice = document.createElement("span");
-    newPrice.className = "new-price";
-    newPrice.textContent = produto.price;
+      const productInfo = document.createElement("div");
+      productInfo.className = "product-card-info";
 
-    const buyButton = document.createElement("button");
-    buyButton.className = "buy-button";
-    buyButton.textContent = "Comprar";
+      const productName = document.createElement("h3");
+      productName.className = "product-name";
+      productName.textContent = produto.title;
 
-    productPrice.append(oldPrice, newPrice);
-    productInfo.append(productName, productPrice, buyButton);
-    productCard.append(productImage, productInfo);
+      const productPrice = document.createElement("div");
+      productPrice.className = "product-price";
 
-    produtosContainer.appendChild(productCard);
+      const oldPrice = document.createElement("span");
+      oldPrice.className = "old-price";
+      oldPrice.textContent = produto.old_price;
+
+      const newPrice = document.createElement("span");
+      newPrice.className = "new-price";
+      newPrice.textContent = produto.price;
+
+      const buyButton = document.createElement("button");
+      buyButton.className = "buy-button";
+      buyButton.textContent = "Comprar";
+
+      // Monta o card
+      productPrice.append(oldPrice, newPrice);
+      productInfo.append(productName, productPrice, buyButton);
+      productCard.append(productImage, productInfo);
+
+      // Adiciona o card ao slide
+      swiperSlide.appendChild(productCard);
+
+      // Adiciona o slide ao wrapper
+      swiperWrapper.appendChild(swiperSlide);
+    });
+
+    // 4. Adiciona o wrapper e os botões de navegação ao container do Swiper
+    swiperContainer.appendChild(swiperWrapper);
+
+    // Adiciona botões e paginação (OPCIONAL, mas recomendado)
+    const nextButton = document.createElement("div");
+    nextButton.className = "swiper-button-next";
+
+    const prevButton = document.createElement("div");
+    prevButton.className = "swiper-button-prev";
+
+    const pagination = document.createElement("div");
+    pagination.className = "swiper-pagination";
+
+    swiperContainer.append(nextButton, prevButton, pagination);
+
+    // 5. Adiciona o carrossel completo da categoria ao container principal
+    produtosContainer.appendChild(swiperContainer);
   });
 }
 
-async function getTabelaProdutos() {
-  let url = "./public/utils/tabela-produtos.json";
-  let response = await fetch(url);
-  let data = await response.json();
- 
-  listaProdutos(data);
+/**
+ * Inicializa TODOS os carrosséis com a classe '.category-swiper-container'
+ * Esta função deve ser chamada DEPOIS que o HTML for criado.
+ */
+/**
+ * Inicializa TODOS os carrosséis com a classe '.category-swiper-container'
+ * Esta função deve ser chamada DEPOIS que o HTML for criado.
+ */
+function initializeCategorySwipers() {
+  const allSwipers = document.querySelectorAll(".category-swiper-container");
+
+  allSwipers.forEach((swiperEl) => {
+    new Swiper(swiperEl, {
+      direction: "horizontal",
+      loop: true,
+      spaceBetween: 24,
+
+      // CORRETO: Deixa o CSS (width: 270px) definir a largura
+      slidesPerView: 1, // 1 slide em telas pequenas (mobile)
+
+      // Breakpoints para telas maiores
+      breakpoints: {
+        // >= 640px (mostra 2)
+        640: {
+          slidesPerView: 2,
+        },
+        // >= 768px (mostra 3)
+        768: {
+          slidesPerView: 3,
+        },
+        // >= 1024px (mostra 4)
+        1024: {
+          slidesPerView: 4,
+        },
+        // >= 1280px (mostra 5, igual sua imagem!)
+        1280: {
+          slidesPerView: 5,
+        },
+      },
+
+      // Espaço entre os cards (1.5rem = 24px)
+      spaceBetween: 24,
+
+      pagination: {
+        el: swiperEl.querySelector(".swiper-pagination"),
+        clickable: true,
+      },
+      navigation: {
+        nextEl: swiperEl.querySelector(".swiper-button-next"),
+        prevEl: swiperEl.querySelector(".swiper-button-prev"),
+      },
+    });
+  });
 }
-getTabelaProdutos();
+
+/**
+ * Busca os dados e inicia a criação do HTML e
+ * a inicialização dos carrosséis.
+ */
+async function getTabelaProdutos() {
+  try {
+    let url = "./public/utils/tabela-produtos.json";
+    let response = await fetch(url);
+    let data = await response.json();
+
+    // 1. Cria todo o HTML
+    listaProdutos(data);
+
+    // 2. DEPOIS que o HTML existe, inicializa os Swipers
+    initializeCategorySwipers();
+  } catch (error) {
+    console.error("Falha ao buscar ou processar produtos:", error);
+  }
+}
+
+// --- EXECUÇÃO QUANDO O DOM ESTIVER PRONTO ---
 
 document.addEventListener("DOMContentLoaded", () => {
-  
-  const userNameDisplay = document.getElementById("user-greeting"); 
-  const loginLink = document.getElementById("login-link"); 
+  // Configura a saudação do usuário
+  const userNameDisplay = document.getElementById("user-greeting");
+  const loginLink = document.getElementById("login-link");
   const nameUser = window.localStorage.getItem("name");
 
   if (nameUser && userNameDisplay) {
     userNameDisplay.innerHTML = `Olá,<br /><b>${nameUser}</b>`;
-    loginLink.href = "#"; 
+    loginLink.href = "#";
   }
-});
 
-
-document.addEventListener("DOMContentLoaded", () => {
+  // Configura a Sidebar
   const openMenuBtn = document.getElementById("open-menu-btn");
   const closeMenuBtn = document.getElementById("sidebar-close-btn");
   const sidebar = document.getElementById("nav-sidebar");
   const overlay = document.getElementById("overlay");
 
-  const openSidebar = () => {
-    sidebar.classList.add("active");
-    overlay.classList.add("active");
-  };
+  if (openMenuBtn && closeMenuBtn && sidebar && overlay) {
+    const openSidebar = () => {
+      sidebar.classList.add("active");
+      overlay.classList.add("active");
+    };
+    const closeSidebar = () => {
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+    };
 
-  const closeSidebar = () => {
-    sidebar.classList.remove("active");
-    overlay.classList.remove("active");
-  };
+    openMenuBtn.addEventListener("click", openSidebar);
+    closeMenuBtn.addEventListener("click", closeSidebar);
+    overlay.addEventListener("click", closeSidebar);
+  }
 
-  // Event listeners
-  openMenuBtn.addEventListener("click", openSidebar);
-  closeMenuBtn.addEventListener("click", closeSidebar);
-  overlay.addEventListener("click", closeSidebar);
+  // Puxa os produtos (isso vai chamar 'listaProdutos' e 'initializeCategorySwipers')
+  getTabelaProdutos();
 });
+
+// REMOVA a inicialização antiga do Swiper que estava aqui.
+// Ela foi substituída pela função 'initializeCategorySwipers'.
+
+// function listaProdutos(data) {
+//   const produtosContainer = document.getElementById("products-list");
+
+//   Object.entries(data).forEach(([chave, produtos]) => {
+//      const categoriesSection = document.createElement("h2");
+//     categoriesSection.className = "category-title";
+//     categoriesSection.textContent = chave.charAt(0).toUpperCase() + chave.slice(1);
+//     produtosContainer.appendChild(categoriesSection);
+//     produtos.forEach((produto) => {
+
+//     const productCard = document.createElement("a");
+//     productCard.href = "#";
+//     productCard.className = "product-card";
+
+//     const productImage = document.createElement("img");
+//     productImage.src = produto.img;
+//     productImage.alt = produto.name;
+//     productImage.className = "product-image";
+
+//     const productInfo = document.createElement("div");
+//     productInfo.className = "product-card-info";
+
+//     const productName = document.createElement("h3");
+//     productName.className = "product-name";
+//     productName.textContent = produto.title;
+
+//     const productPrice = document.createElement("div");
+//     productPrice.className = "product-price";
+
+//     const oldPrice = document.createElement("span");
+//     oldPrice.className = "old-price";
+//     oldPrice.textContent = produto.old_price;
+
+//     const newPrice = document.createElement("span");
+//     newPrice.className = "new-price";
+//     newPrice.textContent = produto.price;
+
+//     const buyButton = document.createElement("button");
+//     buyButton.className = "buy-button";
+//     buyButton.textContent = "Comprar";
+
+//     productPrice.append(oldPrice, newPrice);
+//     productInfo.append(productName, productPrice, buyButton);
+//     productCard.append(productImage, productInfo);
+
+//     produtosContainer.appendChild(productCard);
+//     });
+//   });
+// }
+
+// async function getTabelaProdutos() {
+//   let url = "./public/utils/tabela-produtos.json";
+//   let response = await fetch(url);
+//   let data = await response.json();
+
+//   listaProdutos(data);
+// }
+// getTabelaProdutos();
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const userNameDisplay = document.getElementById("user-greeting");
+//   const loginLink = document.getElementById("login-link");
+//   const nameUser = window.localStorage.getItem("name");
+
+//   if (nameUser && userNameDisplay) {
+//     userNameDisplay.innerHTML = `Olá,<br /><b>${nameUser}</b>`;
+//     loginLink.href = "#";
+//   }
+// });
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const openMenuBtn = document.getElementById("open-menu-btn");
+//   const closeMenuBtn = document.getElementById("sidebar-close-btn");
+//   const sidebar = document.getElementById("nav-sidebar");
+//   const overlay = document.getElementById("overlay");
+
+//   const openSidebar = () => {
+//     sidebar.classList.add("active");
+//     overlay.classList.add("active");
+//   };
+
+//   const closeSidebar = () => {
+//     sidebar.classList.remove("active");
+//     overlay.classList.remove("active");
+//   };
+
+//   // Event listeners
+//   openMenuBtn.addEventListener("click", openSidebar);
+//   closeMenuBtn.addEventListener("click", closeSidebar);
+//   overlay.addEventListener("click", closeSidebar);
+// });
+
+// const swiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   direction: "vertical",
+//   loop: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: ".swiper-pagination",
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+
+//   // And if we need scrollbar
+//   scrollbar: {
+//     el: ".swiper-scrollbar",
+//   },
+// });
