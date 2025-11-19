@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/frontend/public/css/form.css">
-    <title>Login</title>
+    <title>Entrar na Conta</title>
+    <link rel="stylesheet" href="../public/css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <div class="container-login">
-        <form action="" method="post">
-            <div class="content-login">
-                <div class="title-login">
-                    <h3>Login</h3>
-                </div>
-
-                <div class="inputs-group">
-                    <div class="input-fields">
-                        <input type="text" id="email" placeholder="Nome de usuário ou e-mail" autocomplete="off" required>
-                    </div>
-                    <div class="input-fields">
-                        <input type="password" name="" id="password" placeholder="Senha" autocomplete="off" required>
-                    </div>
-                </div>
-                <div class="box-btn">
-                    <button type="button" id="btn-login">Login</button>
-                </div>
-                <div class="box-links">
-                    <a href="#">Esqueceu a senha ?</a>
-                    <a  id="link-forgot" href="/frontend/pages/cadastro.html">
-                        <p>Não possui uma conta?</p>
-                        <span>Crie uma conta</span>
-                    </a>
-                </div>
-            </div>
-
-        </form>
-
-         <!-- imagem de fundo-->
-        <div>
-           
+    <div class="container">
+        <div class="form-header">
+            <i class="fas fa-sign-in-alt icon"></i>
+            <h1>Fazer Login</h1>
+            <p>Acesse sua conta para continuar</p>
         </div>
 
+        <form>
+            <div class="form-group" id="group-email">
+                <label for="email">Email *</label>
+                <div class="input-icon-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="seu@email.com">
+                </div>
+                <span class="error-message"></span> </div>
 
+            <div class="form-group" id="group-password">
+                <label for="password">Senha *</label>
+                <div class="input-icon-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Mínimo 6 caracteres">
+                </div>
+                <span class="error-message"></span> </div>
 
+            <div class="forgot-password">
+                <a href="#">Esqueceu a senha?</a>
+            </div>
+
+            <button type="button" id="btn-login" class="create-account-btn login-btn">Entrar</button>
+
+            <p class="login-link">Não tem uma conta? <a href="cadastro.html">Crie sua conta</a></p>
+        </form>
     </div>
 
-    <script src="/frontend/public/js/login.js"></script>
+    <script src="../public/js/login.js"></script>
 </body>
-
 </html>

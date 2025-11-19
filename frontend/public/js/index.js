@@ -160,13 +160,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const userNameDisplay = document.getElementById("user-greeting");
   const loginLink = document.getElementById("login-link");
-  const nameUser = window.localStorage.getItem("name");
+  const emailUser = window.localStorage.getItem("email");
 
-  if (nameUser && userNameDisplay) {
-    userNameDisplay.innerHTML = `Olá,<br /><b>${nameUser}</b>`;
+  if (emailUser && userNameDisplay) {
+    userNameDisplay.innerHTML = `Olá,<br /><b>${emailUser}</b>`;
     loginLink.href = "#";
   }
-
 
   const openMenuBtn = document.getElementById("open-menu-btn");
   const closeMenuBtn = document.getElementById("sidebar-close-btn");

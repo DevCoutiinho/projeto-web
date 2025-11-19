@@ -1,109 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4A90E2; /* Azul da imagem */
+    --error-color: #e74c3c; /* Cor de erro: vermelho */
+    --text-color: #333;
+    --label-color: #555;
+    --border-color: #ccc;
+    --background-color: #f0f2f5;
+    --card-background: #fff;
+    --link-color: #4A90E2;
+}
+
+/* ... (Estilos globais e de corpo permanecem os mesmos) ... */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #0d6efd;
-    --secondary-color: #6c757d;
-    --success-color: #198754;
-    --danger-color: #dc3545;
-    --warning-color: #ffc107;
-    --info-color: #0dcaf0;
-    --text-light: #fff;
-    --dark-color: #212529;
-    --header-color: #004d8e;
-}
-
 body {
-    background-color: #f3f3f3;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-.container-login {
+.container {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 100vh;
+    max-width: 700px;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* ... (Estilos de .form-header, .form-group, e .form-row permanecem os mesmos) ... */
+
+.form-header {
+    margin-bottom: 30px;
+}
+
+.form-header .icon {
+    font-size: 40px;
+    color: var(--primary-color);
+    background-color: #e0f2fe;
+    border-radius: 50%;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.form-header h1 {
+    font-size: 26px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-header p {
+    font-size: 15px;
+    color: var(--label-color);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--label-color);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-icon-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon-group i {
+    position: absolute;
+    left: 15px;
+    color: var(--label-color);
+    font-size: 16px;
+    transition: color 0.3s ease; /* Transição para o erro */
+}
+
+.input-icon-group input,
+.input-icon-group select {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 18px;
+    color: var(--text-color);
+    outline: none;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.input-icon-group input:focus,
+.input-icon-group select:focus {
+    border-color: var(--primary-color);
+}
+
+/* Estilo para o select-wrapper para posicionar a seta */
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper i.fa-chevron-down {
+    right: 15px;
+    left: auto;
+    pointer-events: none;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+
+/* --- NOVOS ESTILOS PARA ERRO --- */
+
+.error-message {
+    display: block;
+    color: var(--error-color);
+    font-size: 12px;
+    height: 14px; /* Garante que a altura não mude quando a mensagem aparecer/sumir */
+    margin-top: 4px;
+    margin-left: 5px; /* Alinhamento suave */
+    text-align: left;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.3s ease;
+}
+
+/* Classe para mostrar o erro (será adicionada com JavaScript) */
+.form-group.error .error-message {
+    opacity: 1; /* Torna visível */
+}
+
+/* Estilo da borda e ícone quando há erro */
+.form-group.error .input-icon-group input,
+.form-group.error .input-icon-group select {
+    border-color: var(--error-color);
+}
+
+.form-group.error .input-icon-group i {
+    color: var(--error-color);
+}
+
+/* ---------------------------------- */
+
+
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* ... (Estilos do checkbox, botão e login-link permanecem os mesmos) ... */
+
+.terms-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: var(--card-background);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.content-login {
-    min-width: 340px;
-    min-height: 340px;
-    border-radius: 6px;
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.title-login {
-    text-align: center;
-    color: #000;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.inputs-group {
-    padding: 20px 0px 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}
-
-.inputs-group input {
-    width: 100%;
-    padding: 12px 10px;
-    border-radius: 6px;
-    border: 1px solid #b3b3b3;
-    outline: none;
-
-}
-
-.inputs-group input:focus {
-    border: 1px solid var(--primary-color);
-}
-
-.box-btn {
-    text-align: center;
-}
-
-.box-btn button {
-    width: 100%;
-    padding: 12px 10px;
-    border-radius: 6px;
-    border: none;
+.terms-checkbox input[type="checkbox"]:checked {
     background-color: var(--primary-color);
-    color: var(--text-light);
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition:  0.2s ease-in-out;
+    border-color: var(--primary-color);
 }
 
-.box-btn button:hover{
-    background-color: var(--header-color);
-}
-
-.box-links{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-}
-
-.box-links a{
-    color: var(--primary-color);
-    text-decoration: none;
+.terms-checkbox input[type="checkbox"]:checked::before {
+    content: '\2713';
+    color: white;
     font-size: 14px;
+    line-height: 1;
 }
 
-.box-links #link-forgot{
-    display: flex;
-    gap: 3px;
+.terms-checkbox label {
+    font-size: 14px;
+    color: var(--label-color);
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.terms-checkbox a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.terms-checkbox a:hover {
+    text-decoration: underline;
+}
+
+.create-account-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 25px;
+}
+
+.create-account-btn:hover {
+    background-color: #3a7fd5;
+}
+
+.login-link {
     font-size: 15px;
+    color: var(--label-color);
 }
 
-.box-links #link-forgot p {
-    color: #000;
+.login-link a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* --- Estilos Específicos para Login --- */
+
+.login-btn {
+    /* Não precisa mudar o estilo, mas podemos ajustar a margem */
+    margin-top: 5px; /* Reduz o espaço após o botão */
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -10px; /* Puxa para cima para ficar mais próximo do campo de senha */
+    margin-bottom: 30px; /* Espaçamento antes do botão */
+}
+
+.forgot-password a {
+    font-size: 14px;
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Responsividade - Mantenho as media queries anteriores */
+@media (max-width: 600px) {
+    .container {
+        padding: 25px 30px;
+    }
+
+    /* ... (outras adaptações de responsividade) ... */
+    
+    .form-header h1 {
+        font-size: 24px;
+    }
+
+    .form-header p {
+        font-size: 14px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form-row .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-row .form-group:last-child {
+        margin-bottom: 0;
+    }
+
+    .input-icon-group input,
+    .input-icon-group select {
+        padding: 10px 15px 10px 45px;
+        font-size: 14px;
+    }
+
+    .create-account-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .terms-checkbox label,
+    .login-link {
+        font-size: 13px;
+    }
+
+    .forgot-password {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 20px 25px;
+    }
+    
+    /* ... (outras adaptações de responsividade) ... */
+
+    .form-header .icon {
+        font-size: 35px;
+        padding: 12px;
+    }
+
+    .form-header h1 {
+        font-size: 22px;
+    }
+
+    .form-group label {
+        font-size: 13px;
+    }
+
+    .input-icon-group i {
+        font-size: 14px;
+        left: 12px;
+    }
+
+    .input-icon-group input,
+    .input-icon-group select {
+        padding: 9px 12px 9px 40px;
+    }
 }
