@@ -1,0 +1,93 @@
+
+:root {
+    --orange-accent: #ff6a00;
+    --header-color: #004d8e;
+}
+
+.text-orange {
+    color: var(--orange-accent) !important;
+}
+
+
+.main-content.bg-light {
+    background-color: #f8f9fa !important;
+    min-height: calc(100vh - 80px); 
+}
+
+
+.main-image-container {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 500px; 
+}
+
+.main-image-container img {
+    object-fit: contain; 
+    max-height: 500px;
+}
+
+.img-thumbnail {
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.img-thumbnail.active, .img-thumbnail:hover {
+    border-color: var(--header-color); 
+}
+
+
+.btn-primary-bytebuy {
+    background-color: var(--orange-accent);
+    border: none;
+    color: white;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 106, 0, 0.2);
+}
+
+.btn-primary-bytebuy:hover {
+    background-color: #e65c00; 
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 106, 0, 0.3);
+}
+
+.btn-primary-bytebuy:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 767.98px) {
+    .product-gallery.sticky-top {
+        position: static !important;
+    }
+    
+    .main-image-container {
+        max-height: 350px;
+    }
+    
+    .display-5 {
+        font-size: 2.5rem; /* Preço um pouco menor no mobile */
+    }
+    
+    /* Botão de comprar fica fixo no fundo da tela no mobile */
+    .product-actions {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        border-top: none !important;
+    }
+    /* Adiciona espaço no final da página para o botão fixo não cobrir conteúdo */
+    main.main-content {
+        padding-bottom: 100px !important;
+    }
+}

@@ -122,6 +122,28 @@ button {
   display: none;
 }
 
+.dropdown .login-link {
+color: var(--text-light); 
+text-decoration: none;
+}
+
+.dropdown-menu {
+
+border-radius: 6px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.dropdown-item {
+
+padding: 0.75rem 1rem;
+color: var(--dark-color); 
+}
+
+.dropdown-item i {
+
+margin-right: 0.75rem;
+}
+
 /* --- MENU LATERAL (SIDEBAR) MOBILE --- */
 .nav-sidebar {
   position: fixed;
@@ -255,7 +277,7 @@ button {
   color: var(--orange-accent);
 }
 
-.buy-button {
+.detail-button {
   width: 100%;
   padding: 0.8rem;
   background-color: var(--orange-accent);
@@ -268,7 +290,7 @@ button {
   transition: background-color 0.2s;
 }
 
-.buy-button:hover {
+.detail-button:hover {
   background-color: #e65c00;
 }
 
@@ -431,8 +453,28 @@ button {
     font-size: 0.9rem;
   }
 
-  /* Mostra todos os ícones no desktop */
   .header-icons .bi-bell {
     display: inline;
+  }
+
+.dropdown {
+    display: flex !important; 
+    align-items: center;
+    gap: 1.5rem; 
+  }
+
+ 
+  .login-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    white-space: nowrap;
+  }
+  .login-link i {
+    font-size: 2rem;
+  }
+  .login-link span {
+    line-height: 1.2;
+    font-size: 0.9rem;
   }
 }

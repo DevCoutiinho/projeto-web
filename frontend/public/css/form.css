@@ -11,8 +11,6 @@
     --link-color: #4A90E2;
 }
 
-/* ... (Estilos globais e de corpo permanecem os mesmos) ... */
-
 * {
     margin: 0;
     padding: 0;
@@ -38,8 +36,6 @@ body {
     padding: 30px 20px;
     text-align: center;
 }
-
-/* ... (Estilos de .form-header, .form-group, e .form-row permanecem os mesmos) ... */
 
 .form-header {
     margin-bottom: 30px;
@@ -114,7 +110,6 @@ body {
     border-color: var(--primary-color);
 }
 
-/* Estilo para o select-wrapper para posicionar a seta */
 .select-wrapper {
     position: relative;
 }
@@ -136,9 +131,6 @@ body {
     margin-bottom: 0;
 }
 
-
-/* --- NOVOS ESTILOS PARA ERRO --- */
-
 .error-message {
     display: block;
     color: var(--error-color);
@@ -151,12 +143,10 @@ body {
     transition: opacity 0.3s ease;
 }
 
-/* Classe para mostrar o erro (será adicionada com JavaScript) */
 .form-group.error .error-message {
     opacity: 1; /* Torna visível */
 }
 
-/* Estilo da borda e ícone quando há erro */
 .form-group.error .input-icon-group input,
 .form-group.error .input-icon-group select {
     border-color: var(--error-color);
@@ -166,9 +156,6 @@ body {
     color: var(--error-color);
 }
 
-/* ---------------------------------- */
-
-
 .terms-checkbox {
     display: flex;
     align-items: center;
@@ -176,8 +163,6 @@ body {
     margin-bottom: 30px;
     text-align: left;
 }
-
-/* ... (Estilos do checkbox, botão e login-link permanecem os mesmos) ... */
 
 .terms-checkbox input[type="checkbox"] {
     margin-right: 10px;
@@ -257,19 +242,14 @@ body {
     text-decoration: underline;
 }
 
-
-
-/* --- Estilos Específicos para Login --- */
-
 .login-btn {
-    /* Não precisa mudar o estilo, mas podemos ajustar a margem */
-    margin-top: 5px; /* Reduz o espaço após o botão */
+    margin-top: 5px; 
 }
 
 .forgot-password {
     text-align: right;
-    margin-top: -10px; /* Puxa para cima para ficar mais próximo do campo de senha */
-    margin-bottom: 30px; /* Espaçamento antes do botão */
+    margin-top: -10px; 
+    margin-bottom: 30px; 
 }
 
 .forgot-password a {
@@ -283,15 +263,10 @@ body {
     text-decoration: underline;
 }
 
-
-
-/* Responsividade - Mantenho as media queries anteriores */
 @media (max-width: 600px) {
     .container {
         padding: 25px 30px;
     }
-
-    /* ... (outras adaptações de responsividade) ... */
     
     .form-header h1 {
         font-size: 24px;
@@ -339,8 +314,6 @@ body {
     .container {
         padding: 20px 25px;
     }
-    
-    /* ... (outras adaptações de responsividade) ... */
 
     .form-header .icon {
         font-size: 35px;

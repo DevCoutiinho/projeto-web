@@ -1,3 +1,9 @@
+function navegateToProductDetail(produto) {
+  const produtoDetalhe = encodeURIComponent(JSON.stringify(produto));
+  window.localStorage.setItem("detalhes-produto", produto);
+  window.location.href = `./pages/product-detail.html?produto=${produtoDetalhe}`;
+  
+}
 
 function listaProdutos(data) {
   const produtosContainer = document.getElementById("products-list");
@@ -5,16 +11,14 @@ function listaProdutos(data) {
     console.error("Container principal 'products-list' não encontrado.");
     return;
   }
-  produtosContainer.innerHTML = ""; 
+  produtosContainer.innerHTML = "";
 
   Object.entries(data).forEach(([chave, produtos]) => {
-   
     const categoriesSection = document.createElement("h2");
     categoriesSection.className = "category-title";
     categoriesSection.textContent =
       chave.charAt(0).toUpperCase() + chave.slice(1);
     produtosContainer.appendChild(categoriesSection);
-
 
     const swiperContainer = document.createElement("div");
     swiperContainer.className = "swiper category-swiper-container";
@@ -34,7 +38,7 @@ function listaProdutos(data) {
 
       const productImage = document.createElement("img");
       productImage.src = produto.img;
-      productImage.alt = produto.title; 
+      productImage.alt = produto.title;
       productImage.className = "product-image";
 
       const productInfo = document.createElement("div");
@@ -55,14 +59,19 @@ function listaProdutos(data) {
       newPrice.className = "new-price";
       newPrice.textContent = produto.price;
 
-      const buyButton = document.createElement("button");
-      buyButton.className = "buy-button";
-      buyButton.textContent = "Comprar";
+      const detailButton = document.createElement("button");
+      detailButton.className = "detail-button";
+      detailButton.textContent = "Ver detalhes";
 
       // Monta o card
       productPrice.append(oldPrice, newPrice);
-      productInfo.append(productName, productPrice, buyButton);
+      productInfo.append(productName, productPrice, detailButton);
       productCard.append(productImage, productInfo);
+
+      detailButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        navegateToProductDetail(produto);
+      });
 
       // Adiciona o card ao slide
       swiperSlide.appendChild(productCard);
@@ -90,7 +99,6 @@ function listaProdutos(data) {
     produtosContainer.appendChild(swiperContainer);
   });
 }
-
 
 function initializeCategorySwipers() {
   const allSwipers = document.querySelectorAll(".category-swiper-container");
@@ -138,35 +146,63 @@ function initializeCategorySwipers() {
   });
 }
 
-
 async function getTabelaProdutos() {
   try {
     let url = "./public/utils/tabela-produtos.json";
     let response = await fetch(url);
     let data = await response.json();
 
-    // 1. Cria todo o HTML
     listaProdutos(data);
 
-    // 2. DEPOIS que o HTML existe, inicializa os Swipers
     initializeCategorySwipers();
   } catch (error) {
     console.error("Falha ao buscar ou processar produtos:", error);
   }
 }
 
-
 document.addEventListener("DOMContentLoaded", () => {
-
-  const userNameDisplay = document.getElementById("user-greeting");
   const loginLink = document.getElementById("login-link");
+  const userDropdown = document.getElementById("user-dropdown");
+  const userDropdownGreeting = document.getElementById(
+    "user-dropdown-greeting"
+  );
   const emailUser = window.localStorage.getItem("email");
+  const userNameDisplay = document.getElementById("user-greeting");
 
-  if (emailUser && userNameDisplay) {
-    userNameDisplay.innerHTML = `Olá,<br /><b>${emailUser}</b>`;
-    loginLink.href = "#";
+  if (emailUser) {
+    if (loginLink) {
+      loginLink.style.display = "none !important";
+      loginLink.style.visibility = "hidden";
+    }
+    if (userDropdown) {
+      userDropdown.style.display = "flex !important";
+    }
+    if (userDropdownGreeting) {
+      userDropdownGreeting.innerHTML = `Olá,<br /><b>${emailUser}</b>`;
+    }
+
+    const logoutLink = document.getElementById("logout-link");
+    if (logoutLink) {
+      logoutLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.localStorage.removeItem("email");
+        window.location.reload(); // Recarrega para mostrar o link de login novamente
+      });
+    }
+  } else {
+    
+    if (loginLink) {
+     
+      loginLink.style.display = "flex !important";
+    }
+    if (userDropdown) {
+      userDropdown.style.display = "none !important";
+      userDropdown.style.visibility = "hidden";
+    }
+    if (userNameDisplay) {
+      userNameDisplay.innerHTML = `Entre ou<br /><b>Cadastre-se</b>`;
+    }
   }
-
   const openMenuBtn = document.getElementById("open-menu-btn");
   const closeMenuBtn = document.getElementById("sidebar-close-btn");
   const sidebar = document.getElementById("nav-sidebar");
@@ -189,4 +225,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   getTabelaProdutos();
 });
-

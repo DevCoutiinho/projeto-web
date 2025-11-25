@@ -1,432 +1,484 @@
 {
   "highlights": [
     {
+      "id": 1,
       "title": "PC Gamer Avançado com RGB",
       "description": "Computador desktop de alta performance para jogos, com iluminação RGB customizável.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.7qla_kBEMQe8AhgxAKlE9AHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 4.799,90",
       "old_price": "R$ 5.999,90",
-      "quantidade": 15
+      "stock": 15
     },
     {
+      "id": 2,
       "title": "Monitor Curvo UltraWide 34",
       "description": "Monitor ultrawide curvo de 34 polegadas para uma experiência de visualização imersiva.",
       "img": "https://www.worten.es/i/0386050f0378e36a00cb25105d022d7f7b569dec.jpg",
       "price": "R$ 2.899,00",
       "old_price": "R$ 3.200,50",
-      "quantidade": 22
+      "stock": 22
     },
     {
+      "id": 3,
       "title": "Cadeira Gamer Ergonômica Pro",
       "description": "Cadeira ergonômica projetada para longas sessões de jogos, com múltiplos ajustes.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.54usdW4Xklin7VNUiHb14AHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.250,00",
       "old_price": "R$ 1.499,90",
-      "quantidade": 40
+      "stock": 40
     },
     {
+      "id": 4,
       "title": "Headset Sem Fio 7.1 Surround",
       "description": "Fone de ouvido gamer sem fio com som surround 7.1 e microfone com cancelamento de ruído.",
       "img": "https://tse3.mm.bing.net/th/id/OIP.wdk2vmoj0Q8IOUBTO8iB0wHaHl?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 699,90",
       "old_price": "R$ 850,00",
-      "quantidade": 55
+      "stock": 55
     },
     {
+      "id": 5,
       "title": "Teclado Mecânico Gamer RGB",
       "description": "Teclado mecânico com switches blue, layout ABNT2 e iluminação RGB programável.",
       "img": "https://patoloco.com.br/arquivos/produtos/imagens_adicionais/d660bca32c85beb3d5763c43e364cc7574ffc5e0.jpeg",
       "price": "R$ 450,00",
       "old_price": "R$ 599,90",
-      "quantidade": 75
+      "stock": 75
     },
     {
+      "id": 6,
       "title": "Gabinete Gamer Mid-Tower RGB",
       "description": "Gabinete com lateral em vidro temperado, 3 fans RGB inclusas e excelente fluxo de ar.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.cKZwhU04rgdAtehs0hq7PQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 499,90",
       "old_price": "R$ 599,90",
-      "quantidade": 30
+      "stock": 30
     }
   ],
   "perifericos": [
     {
+      "id": 7,
       "title": "Mouse Gamer Sem Fio 16000 DPI",
       "description": "Mouse óptico sem fio de alta precisão, com 8 botões programáveis e sensor de 16000 DPI.",
       "img": "https://images.tcdn.com.br/img/img_prod/1362985/mouse_sem_fio_gamer_redragon_cobra_pro_rgb_wireless_16000_dpi_8_botoes_programaveis_black_m711_pro_1835_8_daeaa325b578b543c393a6e4da46cf39.jpg",
       "price": "R$ 389,90",
       "old_price": "R$ 499,90",
-      "quantidade": 110
+      "stock": 110
     },
     {
+      "id": 8,
       "title": "Mousepad Gamer Extra Grande",
       "description": "Mousepad speed com superfície otimizada e bordas costuradas. Tamanho 900x400mm.",
       "img": "https://images.kabum.com.br/produtos/fotos/sync_mirakl/466421/Mouse-Pad-Gamer-Speed-Extra-Grande-Profissional-90x40-Drag-o-Azul_1716557864_gg.jpg",
       "price": "R$ 120,00",
       "old_price": "R$ 150,00",
-      "quantidade": 200
+      "stock": 200
     },
     {
+      "id": 9,
       "title": "Webcam Full HD 1080p 60fps",
       "description": "Webcam de alta definição para streaming e videochamadas, com autofoco e 60fps.",
       "img": "https://cdn11.bigcommerce.com/s-shevscav5p/images/stencil/1280x1280/products/6707/25562/Gamer-Extreme-Webcam__36387.1682026160.jpg?c=2",
       "price": "R$ 350,00",
       "old_price": "R$ 500,00",
-      "quantidade": 90
+      "stock": 90
     },
     {
+      "id": 10,
       "title": "Controle Gamer Sem Fio (Compatível PC/Console)",
       "description": "Gamepad ergonômico com conexão sem fio 2.4GHz e Bluetooth, compatível com múltiplas plataformas.",
       "img": "https://tse3.mm.bing.net/th/id/OIP.uJ_2h9omgJKgnvnav4uFiwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 289,90",
       "old_price": "R$ 350,00",
-      "quantidade": 95
+      "stock": 95
     },
     {
+      "id": 11,
       "title": "Volante Gamer com Force Feedback",
       "description": "Volante realista com rotação de 900 graus, pedais de metal e tecnologia Force Feedback.",
       "img": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mcjnbf1tpxj583",
       "price": "R$ 1.799,00",
       "old_price": "R$ 2.100,00",
-      "quantidade": 14
+      "stock": 14
     },
     {
+      "id": 12,
       "title": "Óculos de Realidade Virtual (VR Headset)",
       "description": "Headset VR standalone com 6DoF (6 graus de liberdade) e alta resolução para jogos imersivos.",
       "img": "https://www.worten.pt/i/40fcebe32bae2c275cb3df2180f8c360ad6c6713.jpg",
       "price": "R$ 2.999,00",
       "old_price": "R$ 3.500,00",
-      "quantidade": 10
+      "stock": 10
     }
   ],
   "componentes": [
     {
+      "id": 13,
       "title": "SSD NVMe 1TB Gen4",
       "description": "Armazenamento ultrarrápido para seus jogos e sistema. Velocidades de leitura de até 7000MB/s.",
       "img": "https://th.bing.com/th/id/R.3a4b8e66a998e5be22304a5afcfef6f2?rik=Ah%2bQwaVy6GiasQ&pid=ImgRaw&r=0",
       "price": "R$ 750,00",
       "old_price": "R$ 900,00",
-      "quantidade": 65
+      "stock": 65
     },
     {
+      "id": 6,
       "title": "Gabinete Gamer Mid-Tower RGB",
       "description": "Gabinete com lateral em vidro temperado, 3 fans RGB inclusas e excelente fluxo de ar.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.cKZwhU04rgdAtehs0hq7PQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 499,90",
       "old_price": "R$ 599,90",
-      "quantidade": 30
+      "stock": 30
     },
     {
+      "id": 14,
       "title": "Placa de Vídeo RTX 4070 12GB",
       "description": "Performance de nova geração com Ray Tracing e DLSS 3. Ideal para jogar em 1440p.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.RKYLjl2ekIvfiKLgCY6OdQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 4.299,00",
       "old_price": "R$ 4.800,00",
-      "quantidade": 12
+      "stock": 12
     },
     {
+      "id": 15,
       "title": "Placa-Mãe ATX Z790",
       "description": "Placa-mãe topo de linha com suporte a DDR5 e PCIe 5.0, ideal para processadores Intel 13ª/14ª gen.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.QaynQbVicMPApqQnjj9ssQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 2.199,90",
       "old_price": "R$ 2.500,00",
-      "quantidade": 25
+      "stock": 25
     },
     {
+      "id": 16,
       "title": "Memória RAM DDR5 32GB (2x16GB) 6000MHz",
       "description": "Kit de memória de alta velocidade com iluminação RGB para máximo desempenho em jogos e multitarefa.",
       "img": "https://www.scphardstore.com/wp-content/uploads/Memoria-RAM-DDR5-Corsair-32Gb-2x16Gb-6000-MHz-Vengeance-RGB-Black.png",
       "price": "R$ 1.100,00",
       "old_price": "R$ 1.300,00",
-      "quantidade": 45
+      "stock": 45
     },
     {
+      "id": 17,
       "title": "Fonte de Alimentação 850W 80 Plus Gold Modular",
       "description": "Fonte de 850W com certificação 80 Plus Gold e cabos totalmente modulares para um build limpo.",
       "img": "https://www.visaovip.com/imagem/fonte-de-alimentacao/fonte-de-alimentacao-cooler-master-v850-sfx-gold-850w-sfx-modular-80-plus-gold-mpy-8501-sfhagv-us/2/552376.jpg?pfdrid_c=true",
       "price": "R$ 899,90",
       "old_price": "R$ 999,90",
-      "quantidade": 38
+      "stock": 38
     },
     {
+      "id": 18,
       "title": "Water Cooler 360mm RGB",
       "description": "Sistema de refrigeração líquida selado com radiador de 360mm e 3 fans RGB para CPU.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.i9RucojMi0ZFLPp2O4qixgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 780,00",
       "old_price": "R$ 950,00",
-      "quantidade": 33
+      "stock": 33
     },
     {
+      "id": 19,
       "title": "Kit 3 Fans RGB 120mm com Controladora",
       "description": "Pacote com 3 ventoinhas de 120mm ARGB e controladora dedicada para sincronização de efeitos.",
       "img": "https://tse3.mm.bing.net/th/id/OIP.Q7Be9esWItTJ4jBusbA1UwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 219,90",
       "old_price": "R$ 250,00",
-      "quantidade": 130
+      "stock": 130
     },
     {
+      "id": 20,
       "title": "SSD Externo 2TB USB-C",
       "description": "Unidade de estado sólido portátil de 2TB com conexão USB-C 3.2 Gen2 para transferências rápidas.",
       "img": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6551/6551159cv12d.jpg",
       "price": "R$ 950,00",
       "old_price": "R$ 1.150,00",
-      "quantidade": 48
+      "stock": 48
     }
   ],
   "notebooks": [
     {
+      "id": 21,
       "title": "Notebook Gamer 15.6\" 144Hz",
       "description": "Notebook com tela 144Hz, Core i7 de 13ª gen e placa de vídeo dedicada RTX 4060.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.yujpwdDIAyffM8sjuaMkiwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 7.899,00",
       "old_price": "R$ 8.500,00",
-      "quantidade": 8
+      "stock": 8
     },
-     {
+    {
+      "id": 22,
       "title": "Notebook Ultrafino 14\" Ryzen 7",
       "description": "Notebook leve e portátil com Ryzen 7, SSD de 1TB e bateria de longa duração.",
       "img": "https://img.bestdealplus.com/ae04/kf/Hbbc71cebbd804f588ae6ea2b65a0db0cn.jpg",
       "price": "R$ 4.299,00",
       "old_price": "R$ 4.799,00",
-      "quantidade": 15
+      "stock": 15
     },
     {
+      "id": 23,
       "title": "Notebook Profissional 15\" i9",
       "description": "Notebook voltado para produtividade máxima, com Intel Core i9 e 32GB de RAM.",
       "img": "https://tse2.mm.bing.net/th/id/OIP.wWMGbLB3tPc9UuP02TN2UQHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 9.990,00",
       "old_price": "R$ 10.400,00",
-      "quantidade": 5
+      "stock": 5
     },
-     {
+    {
+      "id": 24,
       "title": "Notebook Essencial 15\" i5",
       "description": "Notebook ideal para estudos e trabalho, com Intel Core i5 e SSD de 512GB.",
       "img": "https://tse3.mm.bing.net/th/id/OIP.7gv8J3ouF36B1Ddy6r4YzgHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 3.299,00",
       "old_price": "R$ 3.799,00",
-      "quantidade": 30
+      "stock": 30
     },
     {
+      "id": 25,
       "title": "Notebook Gamer 17\" RTX 4070",
       "description": "Notebook de alto desempenho com tela gigante de 17” e RTX 4070.",
       "img": "https://tse3.mm.bing.net/th/id/OIP.5-osyPghYCeLHDD6i_i_VwHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 12.990,00",
       "old_price": "R$ 13.400,00",
-      "quantidade": 4
+      "stock": 4
     },
     {
+      "id": 26,
       "title": "Notebook 2 em 1 Touchscreen",
       "description": "Notebook conversível com tela touch e dobradiça 360º para uso como tablet.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.MZeUNI4cDkKNSb98IOkHYAHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 3.899,00",
       "old_price": "R$ 4.350,00",
-      "quantidade": 20
+      "stock": 20
     },
     {
+      "id": 27,
       "title": "Notebook Premium OLED 13\"",
       "description": "Notebook ultrafino com tela OLED 4K e acabamento em alumínio.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.YTLZyDKyj-Ls78CEJfg3hAHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 8.490,00",
       "old_price": "R$ 8.999,00",
-      "quantidade": 10
+      "stock": 10
     },
     {
+      "id": 28,
       "title": "Notebook para Escritório 14\"",
       "description": "Notebook simples e confiável para tarefas básicas e trabalho remoto.",
       "img": "https://tse3.mm.bing.net/th/id/OIP.xSMsjLJLi6szjp18sgKxPAHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 2.199,00",
       "old_price": "R$ 2.499,00",
-      "quantidade": 35
+      "stock": 35
     }
   ],
   "monitores": [
     {
+      "id": 29,
       "title": "Monitor Gamer 27\" 1440p 165Hz IPS",
       "description": "Monitor Quad HD (1440p) de 27 polegadas com painel IPS e taxa de atualização de 165Hz.",
       "img": "https://tse2.mm.bing.net/th/id/OIP.iuaRBlmb4_mBQYLFuwImNgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.999,00",
       "old_price": "R$ 2.399,00",
-      "quantidade": 28
+      "stock": 28
     },
     {
+      "id": 2,
       "title": "Monitor Curvo UltraWide 34",
       "description": "Monitor ultrawide curvo de 34 polegadas para uma experiência de visualização imersiva.",
       "img": "https://www.worten.es/i/0386050f0378e36a00cb25105d022d7f7b569dec.jpg",
       "price": "R$ 2.899,00",
       "old_price": "R$ 3.200,50",
-      "quantidade": 22
+      "stock": 22
     },
-     {
+    {
+      "id": 30,
       "title": "Monitor Full HD 24\" 75Hz",
       "description": "Monitor de 24 polegadas com painel IPS e bordas finas, ideal para uso diário.",
       "img": "https://a-static.mlcdn.com.br/800x800/monitor-gamer-brazilpc-24-75-hz-full-hd-hdmi-23w-75kfhd/bestpc/by48430/1211a848b943484c7c99812f246e620d.jpeg",
       "price": "R$ 799,00",
       "old_price": "R$ 1.050,00",
-      "quantidade": 40
+      "stock": 40
     },
     {
+      "id": 31,
       "title": "Monitor 32\" 4K IPS",
       "description": "Monitor 4K UHD com painel IPS para edição de imagens e vídeos.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.453HPw-qKrAIu6aauyx3NwHaHk?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 3.299,00",
       "old_price": "R$ 3.650,00",
-      "quantidade": 12
+      "stock": 12
     },
     {
+      "id": 32,
       "title": "Monitor 24\" Gamer 165Hz",
       "description": "Monitor com taxa de atualização de 165Hz, ideal para jogos competitivos.",
       "img": "https://gadgetsoman.com/wp-content/uploads/WhatsApp-Image-2024-03-03-at-5.34.24-PM.jpeg",
       "price": "R$ 1.199,00",
       "old_price": "R$ 1.399,00",
-      "quantidade": 25
+      "stock": 25
     },
     {
+      "id": 33,
       "title": "Monitor Profissional 27\" IPS",
       "description": "Monitor para designers e fotógrafos com cobertura de 100% sRGB.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.cc-m8h48pYO2uttDGKka1QHaFf?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.690,00",
       "old_price": "R$ 1.999,00",
-      "quantidade": 18
+      "stock": 18
     },
     {
+      "id": 34,
       "title": "Monitor Touchscreen 22\"",
       "description": "Monitor com tela sensível ao toque ideal para quiosques e PDVs.",
       "img": "https://tse3.mm.bing.net/th/id/OIP.SjND0n7sF37QBeLXZ_0a2gHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.299,00",
       "old_price": "R$ 1.480,00",
-      "quantidade": 14
+      "stock": 14
     },
     {
+      "id": 35,
       "title": "Monitor Super UltraWide 49\"",
       "description": "Monitor gigantesco para produtividade extrema e multitarefas.",
       "img": "https://9to5toys.com/wp-content/uploads/sites/5/2020/08/viotek-suw49da-super-ultra-wide-49-inch-120hz-gaming-monitor.jpg?quality=82&strip=all",
       "price": "R$ 7.990,00",
       "old_price": "R$ 8.299,00",
-      "quantidade": 6
+      "stock": 6
     }
   ],
   "cadeiras": [
     {
+      "id": 36,
       "title": "Cadeira de Escritório Ergonômica Mesh",
       "description": "Cadeira de escritório com encosto em tela mesh, suporte lombar ajustável e braços 4D.",
       "img": "https://product-hub-prd.madeiramadeira.com.br/192451445/images/c11b21f7-050f-4517-aee6-8221e4e710e8standardresolution.jpg",
       "price": "R$ 1.800,00",
       "old_price": "R$ 2.100,00",
-      "quantidade": 20
+      "stock": 20
     },
-      {
+    {
+      "id": 3,
       "title": "Cadeira Gamer Ergonômica Pro",
       "description": "Cadeira ergonômica projetada para longas sessões de jogos, com múltiplos ajustes.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.54usdW4Xklin7VNUiHb14AHaHa?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.250,00",
       "old_price": "R$ 1.499,90",
-      "quantidade": 40
+      "stock": 40
     },
-     {
+    {
+      "id": 37,
       "title": "Cadeira Executiva Premium",
       "description": "Cadeira com revestimento em couro sintético, inclinação ajustável e apoio de cabeça.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.NS32EvoXDlvrs9oAFhFxlAHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.590,00",
       "old_price": "R$ 1.899,00",
-      "quantidade": 18
+      "stock": 18
     },
-     {
+    {
+      "id": 38,
       "title": "Cadeira Gamer Carbon X",
       "description": "Cadeira gamer com design robusto, pistão classe 4 e apoio reclinável.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.RMWQ-KIUO9zu3nykeq_-YwHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.099,00",
       "old_price": "R$ 1.350,00",
-      "quantidade": 50
+      "stock": 50
     },
     {
+      "id": 39,
       "title": "Cadeira Ergonômica Pro Office",
       "description": "Modelo premium com apoio lumbar automático e regulagem avançada.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.Sc8JEOqSfCLJ7mTlrcDeFAHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 2.490,00",
       "old_price": "R$ 2.799,00",
-      "quantidade": 12
+      "stock": 12
     },
     {
+      "id": 40,
       "title": "Cadeira de Escritório Soft Comfort",
       "description": "Cadeira acolchoada com espuma de alta densidade e rodízios silenciosos.",
       "img": "https://th.bing.com/th/id/OIP.QtL6YQVVKhC9J9tu5qS3mgAAAA?o=7&cb=ucfimg2rm=3&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 899,00",
       "old_price": "R$ 1.099,00",
-      "quantidade": 25
+      "stock": 25
     },
     {
+      "id": 41,
       "title": "Cadeira Ergonômica Pro Mesh Black",
       "description": "Mesh respirável, ajuste de altura e inclinação avançada.",
       "img": "https://product-hub-prd.madeiramadeira.com.br/535096285/images/0f0a2d7b-c9d3-4756-98dd-70650e7c7ae3d6c9ff30e0406fba948a573a5d.jpg",
       "price": "R$ 1.390,00",
       "old_price": "R$ 1.620,00",
-      "quantidade": 16
+      "stock": 16
     },
     {
+      "id": 42,
       "title": "Cadeira Gamer Thunder RGB",
       "description": "Cadeira gamer com iluminação RGB lateral e design futurista.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.Y3WPit_oOUX2xa-PnRzfhQHaHa?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 1.690,00",
       "old_price": "R$ 1.999,00",
-      "quantidade": 9
+      "stock": 9
     }
   ],
   "streaming": [
     {
+      "id": 43,
       "title": "Placa de Captura 4K60 HDR",
       "description": "Placa de captura de vídeo externa USB 3.0 que grava e transmite em 4K a 60fps com HDR.",
       "img": "https://tse2.mm.bing.net/th/id/OIP._3HojMYDCt2jnB5jwuuiugHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 999,00",
       "old_price": "R$ 2.399,00",
-      "quantidade": 23
+      "stock": 23
     },
     {
+      "id": 44,
       "title": "Câmera Mirrorless (para streaming)",
       "description": "Câmera mirrorless com sensor APS-C, saída HDMI limpa e foco automático rápido, ideal para streaming.",
       "img": "https://tse4.mm.bing.net/th/id/OIP.3gsAH8yvOBq3nrm6XFEAggHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 3.890,00",
       "old_price": "R$ 4.200,00",
-      "quantidade": 7
+      "stock": 7
     },
-     {
+    {
+      "id": 45,
       "title": "Microfone Condensador USB para Streaming",
       "description": "Microfone de alta qualidade com padrão polar cardioide, ideal para streaming, podcasts e gravações.",
       "img": "https://images.tcdn.com.br/img/img_prod/1270913/microfone_condensador_jbl_quantum_stream_rgb_14mm_45mwrms_96khz_usb_premium_de_padrao_duplo_para_tra_4259_variacao_5423_1_f5d4bde041d1122dfe4bea5d5ea4f71a.jpg",
       "price": "R$ 650,00",
       "old_price": "R$ 800,00",
-      "quantidade": 50
+      "stock": 50
     },
     {
+      "id": 46,
       "title": "Roteador Wi-Fi 6E Gamer",
       "description": "Roteador Tri-Band com tecnologia Wi-Fi 6E, oferecendo conexões de altíssima velocidade e baixa latência.",
       "img": "https://m.media-amazon.com/images/I/71+TXCO7WhL.jpg",
       "price": "R$ 1.899,90",
       "old_price": "R$ 2.200,00",
-      "quantidade": 18
+      "stock": 18
     },
     {
+      "id": 47,
       "title": "Smart Lâmpada LED RGB Wi-Fi",
       "description": "Lâmpada inteligente E27 compatível com Alexa e Google Assistente, 16 milhões de cores.",
       "img": "https://tse1.mm.bing.net/th/id/OIP.aiKcEPbT4WnU0Kw86lCMXAHaHa?rs=1&pid=ImgDetMain&o=7&rm=3",
       "price": "R$ 79,90",
       "old_price": "R$ 99,90",
-      "quantidade": 300
+      "stock": 300
     },
     {
+      "id": 48,
       "title": "Filtro de Linha 8 Tomadas com USB",
       "description": "Régua de energia com 8 tomadas padrão brasileiro e 4 portas USB para carregamento.",
       "img": "https://images.tcdn.com.br/img/img_prod/1300991/filtro_de_linha_com_8_tomadas_preto_2p_t_10a_1_20m_bivolt_qfl8p_8727_2_83846af476c6ec26c4d0bae09d591d87.jpeg",
       "price": "R$ 149,90",
       "old_price": "R$ 220,00",
-      "quantidade": 150
+      "stock": 150
     },
     {
+      "id": 49,
       "title": "Fita LED RGB 5 Metros Endereçável",
       "description": "Fita de LED ARGB (endereçável) com 5 metros, controlada por software ou app.",
       "img": "https://http2.mlstatic.com/D_NQ_NP_965864-MLB74753147457_022024-O-fita-led-digital-rgb-enderecavel-2811-ip65-300-led-5-metros.webp",
       "price": "R$ 189,90",
       "old_price": "R$ 220,00",
-      "quantidade": 88
+      "stock": 88
     }
   ]
 }

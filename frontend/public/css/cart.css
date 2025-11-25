@@ -1,0 +1,110 @@
+
+
+/* Card do Produto Individual */
+.cart-item-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    transition: box-shadow 0.2s;
+    position: relative;
+}
+
+.cart-item-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Garante que a imagem não distorça */
+    border-radius: 4px;
+    border: 1px solid #f0f0f0;
+}
+
+.quantity-control-group {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.quantity-btn {
+    background-color: #f8f9fa;
+    border: none;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.quantity-btn:hover {
+    background-color: #e2e6ea;
+}
+
+.quantity-input {
+    width: 45px;
+    height: 35px;
+    text-align: center;
+    border: none;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+    font-weight: 600;
+    outline: none;
+}
+
+.btn-remove-item {
+    color: #dc3545;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    padding: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-remove-item:hover {
+    transform: scale(1.1);
+}
+
+.btn-black-checkout {
+    background-color: #ff6a00;
+    /* Preto Puro */
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(255, 106, 0, 0.2);
+}
+
+.btn-black-checkout:hover {
+    background-color: #e65c00;
+    /* Laranja mais escuro no hover */
+    transform: translateY(-2px);
+    /* Efeito de levantar sutil */
+    box-shadow: 0 6px 12px rgba(255, 106, 0, 0.3);
+    color: #fff;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+    .cart-item-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-item-details {
+        margin-top: 1rem;
+        margin-left: 0 !important;
+    }
+
+    .cart-actions-row {
+        justify-content: center !important;
+        margin-top: 1rem;
+    }
+}
