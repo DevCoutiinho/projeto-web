@@ -67,7 +67,10 @@ function validarIdade(idade) {
 
 function validarCheckbox(checked) {
   if (!checked)
-    return { isCorret: false, message: "Você deve aceitar os termos para continuar." };
+    return {
+      isCorret: false,
+      message: "Você deve aceitar os termos para continuar.",
+    };
 
   return { isCorret: true, message: "" };
 }
@@ -80,7 +83,7 @@ function validarGenero(genero) {
 }
 
 function validateCampo(campo) {
-  console.log(campo);
+
   switch (campo.id) {
     case "email":
       return validateEmail(campo.value.trim());
@@ -103,9 +106,10 @@ function validateCampo(campo) {
 
 function escutarCampos() {
   inputFields.forEach((input) => {
-   const evento = (input.tagName === "SELECT" || input.type === "checkbox")
-    ? "change"
-    : "input";
+    const evento =
+      input.tagName === "SELECT" || input.type === "checkbox"
+        ? "change"
+        : "input";
 
     input.addEventListener(evento, () => {
       const result = validateCampo(input);
@@ -124,13 +128,20 @@ function escutarCampos() {
 }
 
 document.getElementById("btn").addEventListener("click", (e) => {
-
   let formularioValido = true;
 
   inputFields.forEach((input) => {
     const result = validateCampo(input);
+    const form_group = input.closest(".form-group");
+    const errorMessage = form_group.querySelector(".error-message");
 
-    console.log(`${input.id}: ${result.isCorret}`);
+    if (!result.isCorret) {
+      errorMessage.textContent = result.message;
+      form_group.classList.add("error");
+    } else {
+      form_group.classList.remove("error");
+      errorMessage.textContent = "";
+    }
 
     if (!result.isCorret) formularioValido = false;
   });
@@ -138,6 +149,6 @@ document.getElementById("btn").addEventListener("click", (e) => {
   if (formularioValido) {
     window.location.href = "/frontend/pages/login.html";
   }
-});   
+});
 
 escutarCampos();

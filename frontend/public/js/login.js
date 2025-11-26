@@ -25,7 +25,7 @@ function validarPassword(password) {
 }
 
 function validateCampo(campo) {
-  console.log(campo);
+
   switch (campo.id) {
     case "email":
       return validateEmail(campo.value.trim());
@@ -37,7 +37,6 @@ function validateCampo(campo) {
 }
 
 function escutarCampos() {
-
   inputFields.forEach((input) => {
     input.addEventListener("input", () => {
       const result = validateCampo(input);
@@ -61,21 +60,28 @@ document.getElementById("btn-login").addEventListener("click", () => {
 
   inputFields.forEach((input) => {
     const result = validateCampo(input);
+    const form_group = input.closest(".form-group");
+    const errorMessage = form_group.querySelector(".error-message");
 
-    if(input.id === "email") {
-      email = input.value.trim();
+    if (!result.isCorret) {
+      errorMessage.textContent = result.message;
+      form_group.classList.add("error");
+    } else {
+      form_group.classList.remove("error");
+      errorMessage.textContent = "";
     }
 
-    console.log(`${input.id}: ${result.isCorret}`);
+    if (input.id === "email") {
+      email = input.value.trim();
+    }
 
     if (!result.isCorret) formularioValido = false;
   });
 
   if (formularioValido) {
     window.localStorage.setItem("email", email);
-   window.location.href = "../index.html";
+    window.location.href = "../index.html";
   }
-
 });
 
 escutarCampos();
